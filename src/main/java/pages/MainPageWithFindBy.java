@@ -21,21 +21,6 @@ public class MainPageWithFindBy extends BasePage {
         return this;
     }
 
-    public MainPageWithFindBy inputEmailToSubscribe(String email) {
-        driver.findElement(By.xpath("//input[@name='EMAIL']")).sendKeys(email);
-        return this;
-    }
-
-    @DisableHealing
-    public MainPageWithFindBy clickSubscribe() {
-        driver.findElement(By.xpath("//button[text()='Subscribe']")).click();
-        return this;
-    }
-
-    public String getSubscriptionValidationErrorText() {
-        return driver.findElement(By.cssSelector("div.js-errorbox-all.t186__blockinput-errorbox")).getText();
-    }
-
     public MainPageWithFindBy inputEmailToSubmit(String email) {
         driver.findElement(By.xpath("//input[@placeholder='E-mail']")).sendKeys(email);
         return this;
@@ -52,7 +37,7 @@ public class MainPageWithFindBy extends BasePage {
     }
 
     public MainPageWithFindBy clickSubmit() {
-        driver.findElement(By.xpath("//button[text()='Submit']")).click();
+        driver.findElement(By.cssSelector("div.t-form__submit > button.t-submit")).click();
         return this;
     }
 
