@@ -4,7 +4,7 @@ package pages;
 import com.epam.healenium.SelfHealingDriver;
 
 public class BasePage {
-    protected String mainPageUrl = "http://ssha.tilda.ws";
+    protected String mainPageUrl = "https://healenium.io/sha";
     protected SelfHealingDriver driver;
 
     public BasePage(SelfHealingDriver driver) {

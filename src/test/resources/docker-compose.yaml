@@ -17,7 +17,7 @@ services:
       - healenium
 
   healenium:
-    image: healenium/hlm-backend:latest
+    image: healenium/hlm-backend:promtest
     ports:
       - "7878:7878"
     links:

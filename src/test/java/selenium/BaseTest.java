@@ -1,6 +1,7 @@
 package selenium;
 
 import com.epam.healenium.SelfHealingDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.Dimension;
@@ -16,6 +17,7 @@ public class BaseTest {
 
     @BeforeEach
     public void setUp() {
+        WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         //declare delegate
         WebDriver delegate = new ChromeDriver(options);
