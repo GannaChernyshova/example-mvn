@@ -19,7 +19,7 @@ public class NotificationsTest extends BaseTest {
         mainPage.open()
             .inputEmailToSubmit("mail@mail")
             .inputNameToSubmit("Name")
-            .inputPhoneToSubmit("89992346789").clickSubmit();
+            .inputPhoneToSubmit("89992346789").clickLearnMore();
         String notificationText = mainPage.getEmailErrorNotificationText();
         assertThat(notificationText, equalToIgnoringCase("Please put a correct e-mail"));
     }

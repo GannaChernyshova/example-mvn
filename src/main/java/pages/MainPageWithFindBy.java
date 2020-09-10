@@ -36,8 +36,8 @@ public class MainPageWithFindBy extends BasePage {
         return this;
     }
 
-    public MainPageWithFindBy clickSubmit() {
-        driver.findElement(By.cssSelector("div.t-form__submit > button.t-submit")).click();
+    public MainPageWithFindBy clickLearnMore() {
+        driver.findElement(By.xpath("//button[text()='Learn More']")).click();
         return this;
     }
 
