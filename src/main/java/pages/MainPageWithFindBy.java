@@ -5,11 +5,15 @@ import com.epam.healenium.SelfHealingDriver;
 import com.epam.healenium.annotation.DisableHealing;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MainPageWithFindBy extends BasePage {
+
+    @FindBy(xpath = "//input[@placeholder='E-mail']" )
+    private WebElement email;
 
     public MainPageWithFindBy(SelfHealingDriver driver) {
         super(driver);
@@ -21,18 +25,18 @@ public class MainPageWithFindBy extends BasePage {
         return this;
     }
 
-    public MainPageWithFindBy inputEmailToSubmit(String email) {
-        driver.findElement(By.xpath("//input[@placeholder='E-mail']")).sendKeys(email);
+    public MainPageWithFindBy inputEmailToSubmit(String emailValue) {
+        email.sendKeys(emailValue);
         return this;
     }
 
-    public MainPageWithFindBy inputNameToSubmit(String name) {
-        driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys(name);
+    public MainPageWithFindBy inputNameToSubmit(String nameValue) {
+        driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys(nameValue);
         return this;
     }
 
-    public MainPageWithFindBy inputPhoneToSubmit(String phone) {
-        driver.findElement(By.xpath("//input[@placeholder='Phone']")).sendKeys(phone);
+    public MainPageWithFindBy inputPhoneToSubmit(String phoneValue) {
+        driver.findElement(By.xpath("//input[@placeholder='Phone']")).sendKeys(phoneValue);
         return this;
     }
 
