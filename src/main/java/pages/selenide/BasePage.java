@@ -1,4 +1,4 @@
-package pages;
+package pages.selenide;
 
 
 import com.epam.healenium.SelfHealingDriver;
@@ -10,4 +10,5 @@ public class BasePage {
     public BasePage(SelfHealingDriver driver) {
         this.driver = driver;
     }
+
 }
