@@ -7,16 +7,6 @@
     <groupId>org.example</groupId>
     <artifactId>example-mvn</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <repositories>
-        <repository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>bintray-epam-healenium</id>
-            <name>bintray</name>
-            <url>https://dl.bintray.com/epam/healenium</url>
-        </repository>
-    </repositories>
 
     <properties>
         <allure.version>2.13.0</allure.version>
@@ -28,13 +18,6 @@
         </allure.cmd.download.url>
     </properties>
 
-    <pluginRepositories>
-        <pluginRepository>
-            <id>bintray-epam-healenium</id>
-            <name>bintray</name>
-            <url>https://dl.bintray.com/epam/healenium</url>
-        </pluginRepository>
-    </pluginRepositories>
 
     <dependencies>
         <dependency>
