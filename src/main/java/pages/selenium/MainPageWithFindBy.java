@@ -67,7 +67,10 @@ public class MainPageWithFindBy extends BasePage {
 
     @Step("Get text for 10$ button")
     public String getTextForTenDollars() {
-        return driver.findElement(By.xpath("//button[contains(@class, 't988__pricebtn_active') and @value = '$10']/span")).getText();
+        WebDriverWait wait = new WebDriverWait(driver, 1);
+        WebElement tenDollarsTab = driver.findElement(By.xpath("//button[contains(@class, 't988__pricebtn_active') and @value = '$10']/span"));
+        wait.until(ExpectedConditions.visibilityOf(tenDollarsTab));
+        return tenDollarsTab.getText();
 
     }
 
