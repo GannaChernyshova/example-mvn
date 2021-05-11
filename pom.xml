@@ -23,7 +23,7 @@
         <dependency>
             <groupId>com.epam.healenium</groupId>
             <artifactId>healenium-web</artifactId>
-            <version>3.0.3-beta-7</version>
+            <version>3.0.3-beta-8</version>
         </dependency>
         <dependency>
             <groupId>com.codeborne</groupId>
