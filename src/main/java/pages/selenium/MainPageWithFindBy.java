@@ -10,6 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
+
 public class MainPageWithFindBy extends BasePage {
 
     @FindBy(xpath = "//input[@placeholder='E-mail']" )
@@ -24,6 +26,11 @@ public class MainPageWithFindBy extends BasePage {
     public MainPageWithFindBy open() {
         driver.get(mainPageUrl);
         return this;
+    }
+
+    @Step("Find all elements with placeholder 'E-mail'")
+    public List<WebElement> getEmailFields(){
+        return driver.findElements(By.xpath("//input[contains(@placeholder,'E-mail')]"));
     }
 
     @Step("Fill email input")
